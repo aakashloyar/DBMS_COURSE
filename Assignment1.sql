@@ -1,3 +1,27 @@
+--1Find the top-3 instructors who have have taught most number of distinct courses from
+--a Across all departments
+--b Statistics department  
+
+--2 Print teaching record of the instructor who has the highest salary, showing the instructor department name, course identifier, course title, section number, semester, year and total enrollment. Sort your result by course_id, year, semester in ascending order. 
+
+--3 Print history of the course with course_id = 362. For each offering of the course, print course id, course title, course department name, instructor name, number of registered students, section id, semester, year and timetable slot. Sort your result by year in descending order.   
+
+--4 For the course_id 319 that was offered in 2003, find the count of out of department student registration. 
+
+--5 Find top-3 students who have registered for the highest number of course credits. Order by total credits and name. Print student id, name, department and total credits (Compute it from the takes and course tables. Do not use tot_credit in the student table.) 
+
+--6 Find the distinct set of courses that were not offered during 2003 and 2004. Print the course id and title. Sort your result by course id in ascending order.    
+
+--7 Find the courses that were offered for the first time most recently in terms of year. Print the course id, title, instructor, year. Sort your result by course id in ascending order. [Find the most recent year when a course was offered for the first time. If there are more than one course offered that year for the first time, then print all of them.]
+
+--8 Find all the courses whose title has more than 15 characters and have a ‘sys’ as substring in the title. Consider case insensitive matching. 'sys', 'Sys', etc are all fine. Print the course id and title. Sort result by course id.
+ 
+--9 Find the department that offers the highest average salary to instructors.
+
+--10 Find all instructors who taught at most once in 2003. (Didn’t teach any course in 2003 or taught just one course in 2003). Print instructor id, name and department. Sort your result by instructor id.
+
+
+
 -- 1- a
 select I.ID,I.name,count(Distinct TS.course_id) most_no_of_distinct_course
 from teaches TS
